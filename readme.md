@@ -12,7 +12,7 @@ Live demo [here](https://mike-veilleux.github.io/Tic-Tac-Toe_Exercise/)
 
 ## Description
 
-A simple Tic Tac Toe app React and Vite toolchain. For this exercise I decided to rewrite the whole project from scratch with the following updrades:
+A simple Tic Tac Toe app created with React and Vite toolchain. For this exercise I decided to rewrite the whole project from scratch with the following updrades:
 
 - Splitted codebase to functional components
 - Pure CSS
