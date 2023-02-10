@@ -4,10 +4,11 @@
 
 This repo contains the Tic Tac Toe exercise from my MIT Full Stack development course.
 
-<!-- Live demo [here](https://mike-veilleux.github.io/ATM-Exercise/) -->
+Live demo [here](https://mike-veilleux.github.io/Tic-Tac-Toe_Exercise/)
 
-<!-- <img src="https://github.com/Mike-Veilleux/ATM-Exercise/blob/main/src/assets/ATM_Screenshot.png"> -->
-<img src="https://robohash.org/Mike">
+<img src="https://github.com/Mike-Veilleux/Tic-Tac-Toe_Exercise/blob/main/src/assets/Tic-Tac-Toe_Screenshot.png">
+
+<!-- <img src="https://robohash.org/Mike"> -->
 
 ## Description
 

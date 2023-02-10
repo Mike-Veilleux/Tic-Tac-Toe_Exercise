@@ -54,15 +54,19 @@ const Board = () => {
     const playerMoves = _latestMoves
       .filter((move) => move.player === _player)
       .map((player) => player.position);
-    //https://stackoverflow.com/a/53606357
     let checker = (arr, target) => target.every((v) => arr.includes(v));
     if (playerMoves.length < 3) {
+      return;
+    } else if (playerMoves.length >= 5) {
+      const winningPlayer = `Draw !`;
+      setWinner(winningPlayer);
+      setisGameFinished(true);
       return;
     } else {
       winningCombinations.forEach((win) => {
         const isFound = checker(win, playerMoves);
         if (isFound == true) {
-          const winningPlayer = `Player ${_player} wins!`;
+          const winningPlayer = `Player ${_player} wins !`;
           setWinner(winningPlayer);
           setisGameFinished(true);
           return;
@@ -76,28 +80,22 @@ const Board = () => {
       <div className="board">
         {squares}
         <div className="message-board">
-          <div>
-            {!isGameFinished && (
-              <div className="message">
-                Now playing: {player == 0 ? "Player 1" : "Player 2"}
+          {!isGameFinished && (
+            <div className="message">
+              Now playing: {player == 0 ? "Player 1" : "Player 2"}
+            </div>
+          )}
+          {isGameFinished && (
+            <button
+              className="button-restart"
+              onClick={() => location.reload()}
+            >
+              <div className="win-message">
+                <div>{winner}</div>
+                <div>Play again ?</div>
               </div>
-            )}
-          </div>
-          {/* <div className="message">{isGameFinished && winner}</div> */}
-          <div>
-            {isGameFinished && (
-              <button
-                className="button-restart"
-                onClick={() => location.reload()}
-              >
-                <div className="win-message">
-                  <div>{winner}</div>
-                  <div>Play again?</div>
-                  {/* {`${winner}\n Play again?`} */}
-                </div>
-              </button>
-            )}
-          </div>
+            </button>
+          )}
         </div>
       </div>
     </Fragment>
